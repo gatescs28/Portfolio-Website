@@ -2652,7 +2652,7 @@ select {
 }
 
 .system-band__breadcrumb a {
-    color: #565b5f;
+    color: var(--ink);
     text-decoration: none;
 }
 
@@ -2667,7 +2667,7 @@ select {
 }
 
 .system-band__breadcrumb > span {
-    color: #7a7f83;
+    color: var(--blue);
 }
 
 .system-band__readout,
