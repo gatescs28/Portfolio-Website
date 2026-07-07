@@ -4809,6 +4809,10 @@ select {
     background: var(--orange);
 }
 
+.prediction-game--upcoming {
+    background: var(--blue);
+}
+
 .prediction-game:hover,
 .prediction-game:focus-visible {
     z-index: 3;
@@ -4833,7 +4837,7 @@ select {
 }
 
 .prediction-chart--ratio {
-    overflow: visible;
+    overflow: hidden;
 }
 
 .prediction-chart--ratio.has-active-game {
@@ -4935,6 +4939,21 @@ select {
     background:
         linear-gradient(110deg, rgba(255,85,0,.1), transparent 68%),
         rgba(25,9,9,.985);
+}
+
+.prediction-calendar__detail.is-upcoming span,
+.prediction-calendar__detail.is-upcoming small {
+    color: var(--blue);
+}
+
+.prediction-calendar__detail.is-upcoming {
+    --detail-accent: var(--blue);
+    --detail-wash: rgba(36,200,255,.1);
+    --detail-glow: rgba(36,200,255,.2);
+    --detail-scan: rgba(36,200,255,.1);
+    background:
+        linear-gradient(110deg, rgba(36,200,255,.1), transparent 68%),
+        rgba(7,18,25,.985);
 }
 
 .prediction-calendar__detail strong {

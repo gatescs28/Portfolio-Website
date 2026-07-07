@@ -8,22 +8,30 @@
 
     if (calendar && tooltip && detailPanel && detailScore && detailPrediction && ratioChart) {
         var games = document.createDocumentFragment();
+        var lossGames = [
+            3, 8, 12, 17, 21,
+            26, 31, 35, 39, 44,
+            48, 53, 57, 62, 66,
+            70, 73, 77, 81, 85,
+            88, 90, 92, 93, 94
+        ];
 
         for (var gameNumber = 1; gameNumber <= 104; gameNumber += 1) {
             var game = document.createElement('button');
-            var isWin = (gameNumber * 37) % 104 < 70;
-            var score = 'Team A 0–0 Team B';
-            var prediction = 'Prediction: Team A 0–0 Team B';
+            var isUpcoming = gameNumber > 94;
+            var isWin = !isUpcoming && lossGames.indexOf(gameNumber) === -1;
+            var score = isUpcoming ? 'Match yet to be played' : 'Team A 0–0 Team B';
+            var prediction = isUpcoming ? 'Prediction: Match yet to be played' : 'Prediction: Team A 0–0 Team B';
             var details = 'Game ' + gameNumber + ': ' + score + ' · ' + prediction;
 
             game.type = 'button';
-            game.className = 'prediction-game prediction-game--' + (isWin ? 'win' : 'loss');
+            game.className = 'prediction-game prediction-game--' + (isUpcoming ? 'upcoming' : (isWin ? 'win' : 'loss'));
             game.setAttribute('role', 'listitem');
             game.setAttribute('aria-label', details);
             game.dataset.game = 'Game ' + gameNumber;
             game.dataset.score = score;
             game.dataset.prediction = prediction;
-            game.dataset.outcome = isWin ? 'win' : 'loss';
+            game.dataset.outcome = isUpcoming ? 'upcoming' : (isWin ? 'win' : 'loss');
             games.appendChild(game);
         }
 
@@ -36,8 +44,8 @@
             detailPanel.querySelector('span').textContent = game.dataset.game + ' // Selected';
             detailScore.textContent = game.dataset.score;
             detailPrediction.textContent = game.dataset.prediction;
-            detailPanel.classList.remove('is-win', 'is-loss');
-            detailPanel.classList.add(game.dataset.outcome === 'win' ? 'is-win' : 'is-loss');
+            detailPanel.classList.remove('is-win', 'is-loss', 'is-upcoming');
+            detailPanel.classList.add('is-' + game.dataset.outcome);
             detailPanel.setAttribute('aria-hidden', 'false');
             detailPanel.classList.add('is-active');
             ratioChart.classList.add('has-active-game');
