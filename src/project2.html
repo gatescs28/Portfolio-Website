@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Algorithmic Trading System — Anderson Gates</title>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="page-scrollable proj-page">
+        <script src="pageTransition.js"></script>
+        <header class="site-header">
+            <span class="site-logo">Anderson Gates</span>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <button class="dark-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+                    <span class="dark-toggle__thumb"></span>
+                </button>
+            </nav>
+        </header>
+        <div class="breadcrumb-bar"></div>
+
+        <div class="proj-content">
+
+            <!-- Title -->
+            <div class="proj-hero">
+                <h1 class="proj-title">Algorithmic Trading System</h1>
+                <p class="proj-subtitle">Four neural networks analyze SPY options data to predict short-term price direction, magnitude, volatility, and risk, then automatically select, size, and log the optimal options trade.</p>
+            </div>
+
+            <!-- Cover image -->
+            <div class="proj-cover">
+                <img src="pictures/trading-cover.jpeg" alt="Project 2 cover" />
+            </div>
+
+            <!-- Three stat blocks -->
+            <div class="proj-stats">
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Overview</p>
+                    <p class="proj-stat__value">Built a pipeline that pulls live SPY quotes and options chain data from Yahoo Finance, runs four specialized neural networks to predict price direction, magnitude, volatility, and adverse excursion, and logs trade recommendations within defined risk parameters. Strategy logic is trained on 24 months of bootstrapped historical data before live deployment, and a JSONL-based store logs every snapshot, signal, trade, and P&L estimate for post-session review.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Technologies</p>
+                    <p class="proj-stat__value">Python · Pandas · NumPy · Alpaca Markets API · Backtrader · PostgreSQL · Docker · cron scheduling · Matplotlib (reporting) · TA-Lib (technical indicators)</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Outcome</p>
+                    <p class="proj-stat__value">Validated directional accuracy above 65% on held-out SPY options data across 24 months of bootstrap training, with daily drawdown capped at 4% and a 3:2 reward-to-risk ratio enforced by the risk manager. Ran live paper trading during market hours with Black-Scholes exit pricing and four-network ensemble inference, confirming stable predictions within expected magnitude error bounds.</p>
+                </div>
+            </div>
+
+            <!-- Two gallery images -->
+            <div class="proj-gallery">
+                <div class="proj-gallery__item">
+                    <img src="pictures/tradeIMG1.jpeg" alt="Detail view A" />
+                </div>
+                <div class="proj-gallery__item">
+                    <img src="pictures/tradeIMG2.jpeg" alt="Detail view B" />
+                </div>
+            </div>
+            <div>
+                <p class="proj-gallery__caption">Left: the model's preformance dashboard displaying daily profit and loss, tracking on individual trades, data intake, and neural network based market analysis. Right: The four neural networks share a dashboard that displays their learning preformance across various statisics, using color for quick indication to ensure the predictions are sound.</p>
+            </div>
+
+            <h2>Preformance Results</h2>
+            <div class="proj-stats">
+                <div class="proj-gallery__item">
+                    <img src="pictures/tradeIMG2.jpeg" alt="placeholder img" />
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Backtesting</p>
+                    <p class="proj-stat__value">During the development of the model backtesting was added to gain more data on the neural network's preformance spending real time in the market. The backtesting the model ran on was over 30 and 90 day periods and was signifigantly impactful when fine tuning the model.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Edits to the adjacent section</p>
+                    <p class="proj-stat__value">Make the picture take up about 40% of the section and the text should take up the other 60% of the screen real estate, they should be on separate panels tho</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="breadcrumb.js"></script>
+        <script src="darkMode.js"></script>
+    </body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Projects</title>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="page-scrollable projects-index">
+        <header class="site-header">
+            <span class="site-logo">Anderson Gates</span>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <button class="dark-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+                    <span class="dark-toggle__thumb"></span>
+                </button>
+            </nav>
+        </header>
+        <div class="system-band system-band--projects">
+            <div class="system-band__readout">
+                <span class="system-barcode" aria-hidden="true"></span>
+                <span class="system-band__breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span aria-hidden="true">//</span>
+                    <a href="projects.html" aria-current="page">Project Index — 04 Builds</a>
+                </span>
+            </div>
+            <div class="system-band__status">Sort: Chrono ▾</div>
+        </div>
+
+        <div class="projects-page">
+
+            <!-- Hero panel -->
+            <div class="projects-stage">
+                <div class="projects-stage__left">
+                    <span class="projects-stage__index">Index // All Builds</span>
+                    <span class="projects-stage__numeral" aria-hidden="true">04</span>
+                    <h1 class="projects-stage__title">Projects</h1>
+                </div>
+                <div class="projects-stage__right">
+                    <div class="projects-stage__status" aria-hidden="true"><i></i><i></i><i></i></div>
+                    <p class="projects-stage__sub">A collection of projects ranging topics like AI modeling, software integration into hardware, and data analysis.</p>
+                    <div class="projects-stage__actions">
+                        <a href="#" class="liquid-glass-btn">View on GitHub ↗</a>
+                        <div class="projects-stage__filter project-filter">
+                            <button class="project-filter__button" type="button" aria-haspopup="true" aria-expanded="false">
+                                Filter: All <span aria-hidden="true">▾</span>
+                            </button>
+                            <div class="project-filter__menu" role="menu" aria-label="Project filter options">
+                                <button type="button" data-filter="all" role="menuitem">All</button>
+                                <button type="button" data-filter="ml" role="menuitem">ML Learning</button>
+                                <button type="button" data-filter="financial" role="menuitem">Financial</button>
+                                <button type="button" data-filter="hardware" role="menuitem">Hardware</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project grid -->
+            <div class="projects-grid">
+
+                <a class="project-card" href="project1.html" data-filter-tags="ml hardware">
+                    <div class="project-card__orb project-card__orb--a"></div>
+                    <div class="project-card__orb project-card__orb--b"></div>
+                    <div class="project-card__media">
+                        <img class="project-card__img"
+                             src="pictures/drone-cover.jpeg"
+                             alt="Neural Net Drone ID System project" />
+                        <video class="project-card__video"
+                               src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                               muted loop playsinline preload="metadata"></video>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-card__tag">001 // AI</span>
+                        <h2 class="project-card__title">Neural Net Drone ID System</h2>
+                        <span class="project-card__footer">View Build <b>→</b></span>
+                    </div>
+                </a>
+
+                <a class="project-card" href="project2.html" data-filter-tags="ml financial">
+                    <div class="project-card__orb project-card__orb--a"></div>
+                    <div class="project-card__orb project-card__orb--b"></div>
+                    <div class="project-card__media">
+                        <img class="project-card__img"
+                             src="pictures/trading-cover.jpeg"
+                             alt="Project 2" />
+                        <video class="project-card__video"
+                               src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+                               muted loop playsinline preload="metadata"></video>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-card__tag">002 // Quant</span>
+                        <h2 class="project-card__title">Trading platform with AI Analytics</h2>
+                        <span class="project-card__footer">View Build <b>→</b></span>
+                    </div>
+                </a>
+
+                <a class="project-card project-card--hidden" href="project3.html">
+                    <div class="project-card__orb project-card__orb--a"></div>
+                    <div class="project-card__orb project-card__orb--b"></div>
+                    <div class="project-card__media">
+                        <img class="project-card__img"
+                             src="pictures/motion-analysis.png"
+                             alt="Project 3" />
+                        <video class="project-card__video"
+                               src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+                               muted loop playsinline preload="metadata"></video>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-card__tag">003 // Vision</span>
+                        <h2 class="project-card__title">Golf Swing Corrective Software</h2>
+                        <span class="project-card__footer">View Build <b>→</b></span>
+                    </div>
+                </a>
+
+                <a class="project-card project-card--hidden" href="project4.html">
+                    <div class="project-card__orb project-card__orb--a"></div>
+                    <div class="project-card__orb project-card__orb--b"></div>
+                    <div class="project-card__media">
+                        <img class="project-card__img"
+                             src="pictures/code-preview.jpeg"
+                             alt="Project 4" />
+                        <video class="project-card__video"
+                               src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+                               muted loop playsinline preload="metadata"></video>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-card__tag">004 // Sec</span>
+                        <h2 class="project-card__title">Cybersecurity Project</h2>
+                        <span class="project-card__footer">View Build <b>→</b></span>
+                    </div>
+                </a>
+
+                <!-- Two new project panels -->
+                <a class="project-card" href="project5.html" data-filter-tags="tools">
+                    <div class="project-card__orb project-card__orb--a"></div>
+                    <div class="project-card__orb project-card__orb--b"></div>
+                    <div class="project-card__media">
+                        <img class="project-card__img"
+                             src="pictures/Trash_Panda.jpg"
+                             alt="Project 5" />
+                        <video class="project-card__video"
+                               src=""
+                               muted loop playinline preload="metadata"></video>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-card__tag">005 // Tools</span>
+                        <h2 class="project-card__title">Trash Panda PKM</h2>
+                        <span class="project-card__footer">View Build <b>→</b></span>
+                    </div>
+                </a>
+                    
+                <a class="project-card project-card--hidden" href="project6.html">
+                    <div class="project-card__orb project-card__orb--a"></div>
+                    <div class="project-card__orb project-card__orb--b"></div>
+                    <div class="project-card__media">
+                        <img class="project-card__img"
+                             src="pictures/Game_Icon.jpeg"
+                             alt="Project 6" />
+                        <video class="project-card__video"
+                               src=""
+                               muted loop playinline preload="metadata"></video>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-card__tag">006 // Game</span>
+                        <h2 class="project-card__title">Game Project</h2>
+                        <span class="project-card__footer">View Build <b>→</b></span>
+                    </div>
+                </a>
+
+                <a class="project-card" href="project7.html" data-filter-tags="financial">
+                    <div class="project-card__orb project-card__orb--a"></div>
+                    <div class="project-card__orb project-card__orb--b"></div>
+                    <div class="project-card__media">
+                        <img class="project-card__img"
+                             src="pictures/Kalshi_Project_Header.jpg"
+                             alt="Prediction Market Model project" />
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-card__tag">007 // Model</span>
+                        <h2 class="project-card__title">Prediction Market Model</h2>
+                        <span class="project-card__footer">View Build <b>→</b></span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <footer class="texture-band" aria-hidden="true"></footer>
+
+        <script src="breadcrumb.js"></script>
+        <script src="darkMode.js"></script>
+        <script src="projects.js"></script>
+    </body>
+</html>

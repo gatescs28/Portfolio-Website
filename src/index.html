@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Modern Home</title>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="home-page">
+        <header class="site-header">
+            <span class="site-logo">Anderson Gates</span>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <button class="dark-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+                    <span class="dark-toggle__thumb"></span>
+                </button>
+            </nav>
+        </header>
+        <div class="system-band system-band--home">
+            <div class="system-band__readout">
+                <span class="system-barcode" aria-hidden="true"></span>
+                <span>Personal Portfolio System — V.3.0</span>
+            </div>
+            <div class="system-band__status">
+                <span aria-hidden="true">◂◂</span>
+                <span><i class="status-dot status-dot--orange"></i>Status: Open to Work</span>
+                <span aria-hidden="true">▸▸</span>
+            </div>
+        </div>
+
+        <!-- Hero -->
+        <section class="home-hero">
+            <div class="home-hero__left">
+                <div class="home-hero__img-panel">
+                    <img src="pictures/Headshot.jpg" alt="Professional headshot of Anderson Gates" />
+                </div>
+                <div class="home-hero__info-panel">
+                    <dl class="home-hero__dl">
+                        <dt>University</dt><dd>Wake Forest University</dd>
+                        <dt>Major</dt><dd>B.S. Computer Science</dd>
+                        <dt>Email</dt><dd>gatescs28@gmail.com</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="home-hero__right">
+                <p class="home-hero__eyebrow">Personal Portfolio</p>
+                <h1 class="home-hero__name">Anderson<br>Gates<span class="accent-period">.</span></h1>
+                <p class="home-hero__tagline">
+                    Student of computer science at Wake Forest University with hands-on experience in AI software consulting, team leadership, and building projects across hardware systems, quantitative trading, and live motion analysis.
+                </p>
+                <div class="home-hero__chips" aria-label="Areas of focus">
+                    <span>AI Automation</span>
+                    <span>Algorithmic Trading</span>
+                    <span>Motion Tracking Analysis</span>
+                    <span>Statistical Analysis</span>
+                </div>
+            </div>
+            <aside class="home-hero__languages-panel" aria-labelledby="languages-title">
+                <p class="home-hero__languages-eyebrow">Technical Toolkit</p>
+                <h2 id="languages-title" class="home-hero__languages-title">Programming Languages</h2>
+                <ul class="home-hero__languages-list">
+                    <li><span>HTML / CSS</span><small>Exp. 6</small><i style="--skill: 60%; --skill-color: var(--green)"></i></li>
+                    <li><span>JavaScript</span><small>Exp. 7</small><i style="--skill: 70%; --skill-color: var(--orange)"></i></li>
+                    <li><span>Python</span><small>Exp. 8</small><i style="--skill: 80%; --skill-color: var(--blue)"></i></li>
+                    <li><span>TypeScript</span><small>Exp. 5</small><i style="--skill: 50%; --skill-color: var(--green)"></i></li>
+                    <li><span>Java</span><small>Exp. 9</small><i style="--skill: 90%; --skill-color: var(--blue)"></i></li>
+                    <li><span>C++</span><small>Exp. 6</small><i style="--skill: 60%; --skill-color: var(--orange)"></i></li>
+                </ul>
+                <div class="toolkit-barcode" aria-hidden="true"></div>
+                <p class="toolkit-note">Self Evaluated</p>
+            </aside>
+        </section>
+
+        <div class="selected-work-band">
+            <span>▸ Selected Work</span><i>//</i><span>03 Featured Builds</span><i>//</i><span>Scroll to Explore</span>
+            <div class="selected-work-band__arrows" aria-hidden="true"><b></b><b></b><b></b></div>
+        </div>
+
+        <main class="main-content">
+            <div class="side-nav-container">
+                <nav class="side-nav">
+                    <a href="experience.html" data-index="0"><button class="neu-btn">Experience</button></a>
+                    <a href="resume.html" data-index="1"><button class="neu-btn">Resume</button></a>
+                    <a href="contact.html" data-index="2"><button class="neu-btn">Contact</button></a>
+                </nav>
+                <a href="experience.html" class="side-nav-merged">
+                    <div class="merged-stripe"></div>
+                    <img src="pictures/drone-cover.jpeg" alt="Experience Preview" />
+                    <span class="merged-label">Experience</span>
+                </a>
+                <a href="resume.html" class="side-nav-merged">
+                    <div class="merged-stripe"></div>
+                    <img src="pictures/resume-preview.jpeg" alt="Resume Preview" />
+                    <span class="merged-label">Resume</span>
+                </a>
+                <a href="contact.html" class="side-nav-merged">
+                    <div class="merged-stripe"></div>
+                    <img src="pictures/code-preview.jpeg" alt="Contact Preview" />
+                    <span class="merged-label">Contact</span>
+                </a>
+            </div>
+            <div class="project-panel">
+                <span class="hud-corner hud-corner--tl" aria-hidden="true"></span>
+                <span class="hud-corner hud-corner--tr" aria-hidden="true"></span>
+                <span class="hud-corner hud-corner--bl" aria-hidden="true"></span>
+                <span class="hud-corner hud-corner--br" aria-hidden="true"></span>
+                <span class="project-panel__meta">Project // 001</span>
+                <button class="slide-arrow slide-arrow--prev" aria-label="Previous">&#8249;</button>
+                <button class="slide-arrow slide-arrow--next" aria-label="Next">&#8250;</button>
+                <div class="slide active">
+                    <img src="pictures/drone-cover.jpeg" alt="Neural Net Drone ID System project" />
+                    <span class="slide-title">Neural Net Drone ID System</span>
+                </div>
+                <div class="slide">
+                    <img src="pictures/trading-cover.jpeg" alt="Project 2" />
+                    <span class="slide-title">Analytical Trading Software</span>
+                </div>
+                <div class="slide">
+                    <img src="pictures/Kalshi_Project_Header.jpg" alt="Prediction Market Model project" />
+                    <span class="slide-title">Prediction Market Model</span>
+                </div>
+                <div class="project-panel__progress" aria-hidden="true">
+                    <span class="is-active"></span><span></span><span></span>
+                    <b>01/03</b>
+                </div>
+            </div>
+        </main>
+        <footer class="texture-band" aria-hidden="true"></footer>
+        <script src="breadcrumb.js"></script>
+        <script src="darkMode.js"></script>
+        <script src="homePage.js"></script>
+    </body>
+</html>

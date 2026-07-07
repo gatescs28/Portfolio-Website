@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>AI SharePoint Workflow Agent — Anderson Gates</title>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="page-scrollable proj-page">
+        <script src="pageTransition.js"></script>
+        <header class="site-header">
+            <span class="site-logo">Anderson Gates</span>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <button class="dark-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+                    <span class="dark-toggle__thumb"></span>
+                </button>
+            </nav>
+        </header>
+        <div class="breadcrumb-bar"></div>
+
+        <div class="proj-content">
+
+            <!-- Title -->
+            <div class="proj-hero">
+                <h1 class="proj-title">AI SharePoint Workflow Agent</h1>
+                <p class="proj-subtitle">An intelligent document automation agent built on Azure OpenAI that classifies, summarizes, and routes government contract documents through SharePoint pipelines without human intervention.</p>
+            </div>
+
+            <!-- Cover image -->
+            <div class="proj-cover">
+                <img src="pictures/external-code-workspace.jpeg" alt="Project 4 cover" />
+            </div>
+
+            <!-- Three stat blocks -->
+            <div class="proj-stats">
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Overview</p>
+                    <p class="proj-stat__value">Developed for an AI software consulting engagement, this agent monitors a SharePoint document library for incoming RFPs and contract files, uses Azure OpenAI with retrieval-augmented generation to produce structured summaries and extract key deadlines, then routes each document to the correct team channel via Power Automate — with status updates written back to the SharePoint list automatically.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Technologies</p>
+                    <p class="proj-stat__value">Python · Azure OpenAI (GPT-4o) · Azure Functions · SharePoint REST API · Microsoft Power Automate · Azure Blob Storage · LangChain (RAG pipeline) · custom prompt engineering</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Outcome</p>
+                    <p class="proj-stat__value">Eliminated roughly 60% of manual document-handling work, allowing the team to process twice as many RFP cycles per quarter at the same headcount. Average time from document receipt to routed summary dropped from several hours to under four minutes, and classification accuracy across 14 document categories held above 91%.</p>
+                </div>
+            </div>
+
+            <!-- Two gallery images -->
+            <div class="proj-gallery">
+                <div class="proj-gallery__item">
+                    <img src="pictures/external-team-collaboration.jpeg" alt="Detail view A" />
+                </div>
+                <div class="proj-gallery__item">
+                    <img src="pictures/external-team-meeting.jpeg" alt="Detail view B" />
+                </div>
+            </div>
+            <p class="proj-gallery__caption">Left: end-to-end workflow diagram showing the SharePoint document library trigger, Azure Function handler, RAG-based classification and summarization step, and Power Automate routing logic that delivers outputs to the correct team channel. Right: the Azure Functions monitoring dashboard displaying invocation logs, processing latency per document, and error-rate tracking across a two-week production window.</p>
+
+        </div>
+
+        <script src="breadcrumb.js"></script>
+        <script src="darkMode.js"></script>
+    </body>
+</html>

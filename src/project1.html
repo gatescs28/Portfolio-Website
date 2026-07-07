@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Neural Net Drone ID System — Anderson Gates</title>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="page-scrollable proj-page">
+        <script src="pageTransition.js"></script>
+        <header class="site-header">
+            <span class="site-logo">Anderson Gates</span>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <button class="dark-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+                    <span class="dark-toggle__thumb"></span>
+                </button>
+            </nav>
+        </header>
+        <div class="breadcrumb-bar"></div>
+        <span class="edge-ruler-tag" aria-hidden="true">UAV // File 001</span>
+
+        <div class="proj-content">
+
+            <!-- Title -->
+            <div class="proj-hero">
+                <span class="proj-hero__numeral" aria-hidden="true">01</span>
+                <div class="proj-hero__meta">
+                    <span>Project // 001</span>
+                    <span><i class="status-dot status-dot--orange"></i>Status: Complete</span>
+                </div>
+                <!-- Previous project name reserved for reuse later: NeuralVector Swarm -->
+                <h1 class="proj-title">Neural Net Drone ID System</h1>
+                <p class="proj-project-subtitle">Neural Network-Coordinated Autonomous Drone Entry Team</p>
+                <p class="proj-subtitle">An end-to-end autonomous UAV platform combining real-time camera input, onboard data analysis, and custom sensor fusion hardware for quick information transfer and post-op action.</p>
+                <div class="telemetry-divider"><i></i><span>◂◂ Telemetry Link Active ▸▸</span><i></i></div>
+            </div>
+
+            <!-- Cover image -->
+            <div class="proj-cover">
+                <img src="pictures/drone-cover.jpeg" alt="Neural Net Drone ID System project cover" />
+                <span class="hud-corner hud-corner--tl" aria-hidden="true"></span>
+                <span class="hud-corner hud-corner--tr" aria-hidden="true"></span>
+                <span class="hud-corner hud-corner--bl" aria-hidden="true"></span>
+                <span class="hud-corner hud-corner--br" aria-hidden="true"></span>
+                <span class="proj-cover__figure">Fig. 01 — Flight Platform</span>
+                <span class="proj-cover__reticle" aria-hidden="true"></span>
+                <div class="proj-cover__readout"><span>Cam 01 — Live</span><span>EXP 1/2000 · ISO 400 · 37.5412°N 77.4360°W</span><span><i class="status-dot status-dot--orange"></i>REC</span></div>
+            </div>
+
+            <!-- Three stat blocks -->
+            <div class="proj-stats">
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Overview</p>
+                    <p class="proj-stat__value">MotionTrack is a real-time behavioral analysis system that uses a live camera feed to track movement, facial expressions, gestures, posture, gaze, and proximity. It combines these signals to assess potential risk and display an immediate, easy-to-understand overview of a person’s behavior.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Technologies</p>
+                    <p class="proj-stat__value tech-stack">
+                        <span>Python</span>
+                        <span>OpenCV</span>
+                        <span>MediaPipe</span>
+                        <span>PyTorch</span>
+                        <span>scikit-learn</span>
+                        <span>NumPy</span>
+                        <span>Pandas</span>
+                        <span>FER</span>
+                        <span>Matplotlib</span>
+                        <span>Joblib</span>
+                        <span>Python threading and concurrent processing</span>
+                        <span>yt-dlp</span>
+                    </p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Outcome</p>
+                    <div class="proj-overview-metrics" aria-label="Key project results">
+                        <strong>89%<small>Classification Accuracy</small></strong>
+                        <strong>&lt;45 ms<small>Inference Latency</small></strong>
+                        <strong>30 FPS<small>Live Processing</small></strong>
+                    </div>
+                    <p class="proj-stat__value">Achieved 89% behavioral risk-classification accuracy on unseen test participants across varied lighting, distances, poses, and backgrounds. The system maintained inference latency below 45 milliseconds while processing video at 30 FPS, enabling responsive four-tier risk assessment entirely on-device without cloud processing.</p>
+                </div>
+            </div>
+
+            <div class="section-band section-band--viewport">▸ Field Documentation</div>
+
+            <!-- Full-width neural network visualization -->
+            <div class="proj-gallery proj-gallery--network">
+                <div class="proj-gallery__item">
+                    <img src="pictures/nn_visualization_placeholder.png" alt="Neural network architecture and training diagnostics visualization" />
+                </div>
+            </div>
+            <p class="proj-gallery__caption">PyTorch risk-assessment network architecture with training diagnostics, calibration results, and per-class error analysis.</p>
+
+            <h2 class="proj-heading proj-heading--process"><span>Design Process</span><small>Build Sequence</small></h2>
+            <div class="proj-process">
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">1</span>
+                    <div>
+                        <p class="proj-stat__label">System Planning</p>
+                        <p class="proj-stat__value">Defined the behavioral signals, risk categories, performance targets, and real-time processing requirements for a camera-based assessment system.</p>
+                    </div>
+                </div>
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">2</span>
+                    <div>
+                        <p class="proj-stat__label">Detection Pipeline</p>
+                        <p class="proj-stat__value">Built an OpenCV and MediaPipe pipeline to detect faces, hands, body pose, motion, gaze, gestures, and subject proximity from a live video feed.</p>
+                    </div>
+                </div>
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">3</span>
+                    <div>
+                        <p class="proj-stat__label">Feature Engineering</p>
+                        <p class="proj-stat__value">Converted visual landmarks into 22 behavioral features covering facial geometry, movement, posture, approach, and temporal behavior.</p>
+                    </div>
+                </div>
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">4</span>
+                    <div>
+                        <p class="proj-stat__label">Adaptive Calibration</p>
+                        <p class="proj-stat__value">Created a rolling calibration system that establishes a personalized baseline, reducing differences caused by individual appearance and resting posture.</p>
+                    </div>
+                </div>
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">5</span>
+                    <div>
+                        <p class="proj-stat__label">Dataset Development</p>
+                        <p class="proj-stat__value">Collected, labeled, balanced, and validated behavioral samples across low-, medium-, and high-risk scenarios for model training.</p>
+                    </div>
+                </div>
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">6</span>
+                    <div>
+                        <p class="proj-stat__label">Model Training</p>
+                        <p class="proj-stat__value">Developed and trained a PyTorch neural network to convert behavioral features into a continuous risk score and four interpretable risk tiers.</p>
+                    </div>
+                </div>
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">7</span>
+                    <div>
+                        <p class="proj-stat__label">Real-Time Integration</p>
+                        <p class="proj-stat__value">Combined detection, inference, and visualization into a responsive application using asynchronous camera capture and background model processing.</p>
+                    </div>
+                </div>
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">8</span>
+                    <div>
+                        <p class="proj-stat__label">Testing and Optimization</p>
+                        <p class="proj-stat__value">Evaluated accuracy, precision, recall, latency, calibration, and false-positive rates across varied people, environments, lighting conditions, and camera positions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="proj-heading proj-heading--results"><span>Performance Results</span><small><i class="status-dot status-dot--green"></i>Validated</small></h2>
+            <div class="proj-stats proj-results proj-results--compact">
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Multi-Signal Behavior Tracking</p>
+                    <strong class="proj-result__metric">22 <small>Behavioral Features</small></strong>
+                    <p class="proj-stat__value">MotionTrack converts live webcam input into a structured set of behavioral signals, including facial geometry, gaze direction, hand position, body pose, motion intensity, and subject proximity. These features allow the system to evaluate activity from multiple visual cues at once instead of relying on a single detection method.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Vision Input Processing</p>
+                    <strong class="proj-result__metric">500+ <small>Landmarks Tracked per Frame</small></strong>
+                    <p class="proj-stat__value">MotionTrack processes a live camera feed by extracting hundreds of facial, hand, and body landmarks from each frame before converting them into behavioral features for classification. This showcases the system’s real-time sensing layer: raw visual input is transformed into structured signals that the neural network can evaluate.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Sensor Fusion Software</p>
+                    <p class="proj-stat__value">Combining camera, depth, and ultrasonic readings gave the navigation system multiple ways to confirm nearby hazards. This sensor-fusion approach supported dependable obstacle detection across changing light levels and cluttered flight paths.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Autonomous Navigation Software</p>
+                    <p class="proj-stat__value">Navigation decisions remained onboard from perception through flight control. Removing dependence on a ground station reduced communication delay and allowed the drone to continue analyzing its surroundings and adjusting its route independently.</p>
+                </div>
+            </div>
+
+        </div>
+        <footer class="project-file-footer">
+            <span>End of File // Neural Net Drone ID System</span>
+            <span class="system-barcode" aria-hidden="true"></span>
+            <span>Prev File · Next File</span>
+            <span class="project-file-footer__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </footer>
+        <div class="texture-band" aria-hidden="true"></div>
+
+        <script src="breadcrumb.js"></script>
+        <script src="darkMode.js"></script>
+    </body>
+</html>

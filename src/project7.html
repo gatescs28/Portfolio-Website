@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Prediction Market Model — Anderson Gates</title>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="page-scrollable proj-page prediction-page">
+        <script src="pageTransition.js"></script>
+        <header class="site-header">
+            <span class="site-logo">Anderson Gates</span>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <button class="dark-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+                    <span class="dark-toggle__thumb"></span>
+                </button>
+            </nav>
+        </header>
+        <div class="breadcrumb-bar"></div>
+        <span class="edge-ruler-tag" aria-hidden="true">MARKET // FILE 007</span>
+
+        <main class="proj-content">
+            <div class="proj-hero">
+                <span class="proj-hero__numeral" aria-hidden="true">07</span>
+                <div class="proj-hero__meta">
+                    <span>Project // 007</span>
+                    <span><i class="status-dot status-dot--orange"></i>Status: In Development</span>
+                </div>
+                <h1 class="proj-title">Prediction Market Model</h1>
+                <p class="proj-project-subtitle">Probability-Driven Event Contract Analysis</p>
+                <p class="proj-subtitle">An in-development modeling system for comparing estimated event probabilities against prediction-market prices, identifying meaningful pricing gaps, and evaluating potential trades within defined risk limits.</p>
+                <div class="telemetry-divider"><i></i><span>◂◂ Market Data Link Active ▸▸</span><i></i></div>
+            </div>
+
+            <div class="proj-cover">
+                <img src="pictures/Kalshi_Project_Header.jpg" alt="Prediction Market Model project cover" />
+            </div>
+
+            <div class="proj-stats">
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Overview</p>
+                    <p class="proj-stat__value">The system is designed to collect prediction-market contract data, translate market prices into implied probabilities, and compare those values against independent model estimates. The goal is to surface contracts where the estimated probability and market consensus meaningfully diverge.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Technologies</p>
+                    <p class="proj-stat__value tech-stack">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>scikit-learn</span>
+                        <span>Kalshi market data</span>
+                        <span>REST APIs</span>
+                        <span>Feature engineering</span>
+                        <span>Probability calibration</span>
+                        <span>Backtesting</span>
+                        <span>Structured trade logging</span>
+                    </p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Development Status</p>
+                    <p class="proj-stat__value">The project is currently focused on data collection, contract normalization, feature validation, and establishing a repeatable evaluation framework before any performance claims are published.</p>
+                </div>
+            </div>
+
+            <div class="section-band">▸ Model Development</div>
+
+            <h2 class="proj-heading proj-heading--process"><span>Design Process</span><small>Build Sequence</small></h2>
+            <div class="proj-process prediction-process">
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">1</span>
+                    <div>
+                        <p class="proj-stat__label">Define the Market Scope</p>
+                        <p class="proj-stat__value">Establish the contract categories, time horizons, liquidity requirements, and risk constraints the model will support.</p>
+                    </div>
+                </div>
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">2</span>
+                    <div>
+                        <p class="proj-stat__label">Build the Data Pipeline</p>
+                        <p class="proj-stat__value">Collect contract prices, order-book information, volume, expiration dates, and resolved outcomes in a consistent format.</p>
+                    </div>
+                </div>
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">3</span>
+                    <div>
+                        <p class="proj-stat__label">Engineer Predictive Features</p>
+                        <p class="proj-stat__value">Transform market behavior and event context into measurable signals while preventing future information from leaking into training data.</p>
+                    </div>
+                </div>
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">4</span>
+                    <div>
+                        <p class="proj-stat__label">Train and Calibrate</p>
+                        <p class="proj-stat__value">Train probability models, compare candidate approaches, and calibrate outputs so predicted confidence aligns with observed outcomes.</p>
+                    </div>
+                </div>
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">5</span>
+                    <div>
+                        <p class="proj-stat__label">Backtest and Validate</p>
+                        <p class="proj-stat__value">Evaluate the system with time-aware testing, simulated execution costs, position limits, and contract-level performance review.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="proj-heading proj-heading--results"><span>Evaluation Framework</span><small><i class="status-dot status-dot--blue"></i>In Development</small></h2>
+            <div class="proj-stats prediction-results">
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Probability Calibration</p>
+                    <strong class="prediction-result__metric">Brier</strong>
+                    <p class="proj-stat__value">Track probability accuracy and calibration rather than relying only on correct directional calls.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Market Edge</p>
+                    <strong class="prediction-result__metric">ΔP</strong>
+                    <p class="proj-stat__value">Measure the gap between model probability and market-implied probability after applying confidence thresholds.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Backtesting</p>
+                    <strong class="prediction-result__metric">Walk-Forward</strong>
+                    <p class="proj-stat__value">Preserve chronological order and evaluate on unseen contracts to reduce optimistic historical results.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Risk Controls</p>
+                    <strong class="prediction-result__metric">Limits</strong>
+                    <p class="proj-stat__value">Model transaction costs, cap contract exposure, and log every simulated recommendation for review.</p>
+                </div>
+            </div>
+
+            <h2 class="proj-heading prediction-project-results__heading">
+                <span>Project Results</span>
+                <small><i class="status-dot status-dot--orange"></i>Results Pending</small>
+            </h2>
+            <div class="proj-stat prediction-project-results">
+                <div class="prediction-chart-grid">
+                    <section class="prediction-chart prediction-chart--ratio" aria-label="Win and loss calendar with 104 placeholder games">
+                        <p class="prediction-chart__label">Win / Loss Ratio</p>
+                        <div class="prediction-calendar__visual">
+                            <div class="prediction-calendar__tally" aria-label="70 wins and 34 losses">
+                                <span class="prediction-calendar__wins"><strong>70</strong><small>W</small></span>
+                                <span class="prediction-calendar__losses"><strong>34</strong><small>L</small></span>
+                            </div>
+                            <div class="prediction-calendar" role="list" aria-label="Game outcomes"></div>
+                        </div>
+                        <div class="prediction-calendar__tooltip">
+                            Hover or focus a game
+                        </div>
+                        <div class="prediction-calendar__detail" aria-live="polite" aria-hidden="true">
+                            <span>Game Details // Selected</span>
+                            <strong>Team A 0–0 Team B</strong>
+                            <small>Prediction: Team A 0–0 Team B</small>
+                        </div>
+                        <div class="prediction-calendar__ratio">
+                            <strong>67%</strong>
+                            <small>Win Rate</small>
+                        </div>
+                    </section>
+
+                    <section class="prediction-chart prediction-chart--profit" aria-label="Total profit results pending">
+                        <p class="prediction-chart__label">Total Profit</p>
+                        <span class="prediction-profit__seed" aria-hidden="true">
+                            <i class="prediction-profit__seed-arrow"></i>
+                            <span class="prediction-profit__seed-moving">
+                                <strong class="prediction-profit__seed-amount">$25</strong>
+                            </span>
+                            <small class="prediction-profit__seed-label">Initial Deposit</small>
+                        </span>
+                        <strong class="prediction-profit__value" data-start="0" data-seed="25" data-target="360">$0</strong>
+                        <span class="prediction-profit__status">Net Profit</span>
+                        <span class="prediction-profit__multiplier" aria-live="polite"></span>
+                    </section>
+
+                    <section class="prediction-chart prediction-chart--gauge" aria-label="Model confidence results pending">
+                        <p class="prediction-chart__label">Model Confidence</p>
+                        <div class="prediction-gauge" aria-hidden="true">
+                            <i></i>
+                        </div>
+                        <div class="prediction-gauge__scale">
+                            <span class="prediction-gauge__value" data-target="80"><strong>0%</strong><small>Confidence</small></span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <footer class="project-file-footer">
+            <span>End of File // Prediction Market Model</span>
+            <span class="system-barcode" aria-hidden="true"></span>
+            <span>Prev File · Next File</span>
+            <span class="project-file-footer__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </footer>
+        <div class="texture-band" aria-hidden="true"></div>
+
+        <script src="breadcrumb.js"></script>
+        <script src="darkMode.js"></script>
+        <script src="predictionMarket.js"></script>
+    </body>
+</html>

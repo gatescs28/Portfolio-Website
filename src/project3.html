@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Athletic Motion Analysis — Anderson Gates</title>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="page-scrollable proj-page">
+        <script src="pageTransition.js"></script>
+        <header class="site-header">
+            <span class="site-logo">Anderson Gates</span>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <button class="dark-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+                    <span class="dark-toggle__thumb"></span>
+                </button>
+            </nav>
+        </header>
+        <div class="breadcrumb-bar"></div>
+
+        <div class="proj-content">
+
+            <!-- Title -->
+            <div class="proj-hero">
+                <h1 class="proj-title">Athletic Motion Analysis</h1>
+                <p class="proj-subtitle">A computer-vision tool that tracks 33-point body landmarks across uploaded video to surface objective biomechanical metrics and flag movement inefficiencies for coaches.</p>
+            </div>
+
+            <!-- Cover image -->
+            <div class="proj-cover">
+                <img src="pictures/external-motion-overlay.png" alt="Project 3 cover" />
+            </div>
+
+            <!-- Three stat blocks -->
+            <div class="proj-stats">
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Overview</p>
+                    <p class="proj-stat__value">Processes uploaded training footage frame-by-frame using MediaPipe Pose to extract joint positions, compute joint angles, velocity vectors, and symmetry scores, then renders skeleton overlays directly onto the video. A Streamlit dashboard presents aggregated biomechanical metrics alongside deviation charts comparing an athlete's movement to a baseline session.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Technologies</p>
+                    <p class="proj-stat__value">Python · MediaPipe Pose · OpenCV · NumPy · SciPy · Matplotlib · Streamlit · ffmpeg (video export) · pandas (session logging)</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Outcome</p>
+                    <p class="proj-stat__value">Cut post-session film review time by an estimated 70% for coaches who piloted the tool. Replaced purely subjective eye-test feedback with reproducible angle and symmetry scores, enabling direct before/after comparison across training cycles and surfacing asymmetries invisible to the naked eye at full playback speed.</p>
+                </div>
+            </div>
+
+            <!-- Two gallery images -->
+            <div class="proj-gallery">
+                <div class="proj-gallery__item">
+                    <img src="pictures/external-golf-course.jpeg" alt="Detail view A" />
+                </div>
+                <div class="proj-gallery__item">
+                    <img src="pictures/external-fitness-training.jpeg" alt="Detail view B" />
+                </div>
+            </div>
+            <p class="proj-gallery__caption">Left: MediaPipe skeleton overlay on a sprint clip with hip, knee, and ankle angles annotated per frame, and a velocity vector rendered at the center of mass. Right: the Streamlit dashboard showing per-joint angle timeseries, left/right symmetry scores, and a deviation heatmap comparing the current session against the athlete's baseline recording.</p>
+
+        </div>
+
+        <script src="breadcrumb.js"></script>
+        <script src="darkMode.js"></script>
+    </body>
+</html>
