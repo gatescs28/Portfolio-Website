@@ -25,6 +25,11 @@
             { label: 'Projects', href: 'projects.html' },
             { label: 'AI SharePoint Workflow Agent', href: null }
         ],
+        'project5.html': [
+            { label: 'Home', href: 'index.html' },
+            { label: 'Projects', href: 'projects.html' },
+            { label: 'Trash Panda PKM', href: null }
+        ],
         'project7.html': [
             { label: 'Home', href: 'index.html' },
             { label: 'Projects', href: 'projects.html' },

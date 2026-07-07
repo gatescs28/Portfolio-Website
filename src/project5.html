@@ -1,22 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Trash Panda PKM — Anderson Gates</title>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="page-scrollable proj-page">
+        <script src="pageTransition.js"></script>
+        <header class="site-header">
+            <span class="site-logo">Anderson Gates</span>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <button class="dark-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+                    <span class="dark-toggle__thumb"></span>
+                </button>
+            </nav>
+        </header>
+        <div class="breadcrumb-bar"></div>
 
-    <h1>Trash Panda PKM Software</h1>
+        <div class="proj-content">
 
-    <p>Main Features</p>
-    <ol>
-        <li>Personal Notion project - centralized place for my thoughts, goals, plans, tasks</li>
-        <li>For the goal panel use Ohtani's method - where 1 central goal/8 sub goals/8 tasks to complete each sub goal</li>
-        <li>add a budgeting feature as well - should have its own panel to interact with - each should have its own</li>
-    </ol>
-    
-    <p>Automate a bot to provide basic Astrological info for the next few days/week/month/etc</p>
-</body>
+            <!-- Title -->
+            <div class="proj-hero">
+                <span class="proj-hero__numeral" aria-hidden="true">05</span>
+                <div class="proj-hero__meta">
+                    <span>Project // 005</span>
+                    <span><i class="status-dot status-dot--blue"></i>Status: Draft</span>
+                </div>
+                <h1 class="proj-title">Trash Panda PKM</h1>
+                <p class="proj-subtitle">Project page reserved for a personal knowledge-management system. Full write-up and documentation coming soon.</p>
+                <div class="telemetry-divider"><i></i><span>◂◂ File Shell Initialized ▸▸</span><i></i></div>
+            </div>
+
+            <!-- Cover image -->
+            <div class="proj-cover">
+                <img src="pictures/Trash_Panda.jpg" alt="Trash Panda PKM project cover" />
+            </div>
+
+            <!-- Empty project shell -->
+            <div class="proj-stats">
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Overview</p>
+                    <p class="proj-stat__value">Content pending.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Technologies</p>
+                    <p class="proj-stat__value">Content pending.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Outcome</p>
+                    <p class="proj-stat__value">Content pending.</p>
+                </div>
+            </div>
+
+            <div class="section-band">▸ Project Documentation Pending</div>
+
+            <div class="proj-stats">
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Build Notes</p>
+                    <p class="proj-stat__value">Reserved for architecture, workflow, and feature details.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Media</p>
+                    <p class="proj-stat__value">Reserved for screenshots, diagrams, and interface previews.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Next Update</p>
+                    <p class="proj-stat__value">Reserved for final project summary and results.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="project-file-footer">
+            <span>End of File // Trash Panda PKM</span>
+            <span class="system-barcode" aria-hidden="true"></span>
+            <span>Prev File · Next File</span>
+            <span class="project-file-footer__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </footer>
+        <div class="texture-band" aria-hidden="true"></div>
+
+        <script src="breadcrumb.js"></script>
+        <script src="darkMode.js"></script>
+    </body>
 </html>
