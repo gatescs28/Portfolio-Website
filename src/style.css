@@ -1334,9 +1334,10 @@
 
     /* ── Skills ── */
     .skills-section {
-        padding: 120px 56px 80px;
+        padding: 104px 56px 80px;
         max-width: 1400px;
         margin: 0 auto;
+        width: 100%;
     }
 
     .section-eyebrow {
@@ -1361,9 +1362,13 @@
         display: flex;
         flex-wrap: wrap;
         gap: 14px;
+        align-items: center;
     }
 
     .skill-chip {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         padding: 14px 22px;
         background: #e8ecf2;
         color: #3a3d40;
@@ -1392,15 +1397,20 @@
         padding: 80px 56px 120px;
         max-width: 1400px;
         margin: 0 auto;
+        width: 100%;
     }
 
     .education-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 32px;
+        align-items: stretch;
     }
 
     .edu-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
         background: #e8ecf2;
         border-radius: 20px;
         padding: 36px 40px 40px;
@@ -1477,7 +1487,7 @@
     }
 
     .resume-outro__lead {
-        font-size: 30px;
+        font-size: 36px;
         font-weight: 600;
         letter-spacing: -0.5px;
         color: #1d2024;
@@ -3131,8 +3141,9 @@ select {
     align-items: center;
     gap: 22px;
     justify-content: flex-start;
+    margin-left: 26px;
     min-height: 44px;
-    padding: 12px 56px 12px 88px;
+    padding: 12px 56px 12px 62px;
     background: var(--blue);
     border-top: 1px solid var(--ink);
     border-bottom: 1px solid var(--ink);
@@ -5517,7 +5528,7 @@ body.dark .texture-band {
     }
 
     .selected-work-band {
-        padding-left: 48px;
+        padding-left: 22px;
     }
 
     .projects-stage {
@@ -5649,6 +5660,7 @@ body.dark .texture-band {
     .selected-work-band {
         flex-wrap: wrap;
         gap: 8px 14px;
+        margin-left: 0;
         padding: 14px 24px;
         line-height: 1.5;
     }

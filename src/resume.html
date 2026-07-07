@@ -163,6 +163,7 @@
                     <ul class="edu-card__bullets">
                         <li>B.S. — Computer Science Track</li>
                         <li>Active member, Pi Kappa Phi Fraternity</li>
+                        <li>Active member of the Computer Science Club</li>
                     </ul>
                 </article>
                 <article class="edu-card">
@@ -171,6 +172,7 @@
                     <p class="edu-card__meta">Richmond, VA</p>
                     <ul class="edu-card__bullets">
                         <li>Capstone Scholar</li>
+                        <li>Computer Science Award Recipient</li>
                         <li>Led an independent research project on gaming code, culminating in a presentation to the administration and student body.</li>
                     </ul>
                 </article>
@@ -179,9 +181,9 @@
 
         <!-- Footer / CTA -->
         <section class="resume-outro">
-            <p class="resume-outro__lead">Want the full PDF, or to talk?</p>
+            <p class="resume-outro__lead">Want the full PDF?</p>
             <div class="resume-outro__actions">
-                <a class="neu-btn" href="contact.html">Contact Me</a>
+                <a class="neu-btn" href="pictures/Gates_Resume_2026.pdf" target="_blank" rel="noopener">View PDF</a>
             </div>
         </section>
 
@@ -220,6 +222,7 @@
                     duration: 0.6,
                     stagger: 0.06,
                     ease: 'power2.out',
+                    clearProps: 'transform',
                     scrollTrigger: {
                         trigger: '.skills-grid',
                         start: 'top 80%',
@@ -231,8 +234,9 @@
                     opacity: 0,
                     y: 40,
                     duration: 0.9,
-                    stagger: 0.15,
+                    stagger: 0,
                     ease: 'power3.out',
+                    clearProps: 'transform',
                     scrollTrigger: {
                         trigger: '.education-grid',
                         start: 'top 80%',
