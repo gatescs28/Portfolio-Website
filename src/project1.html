@@ -87,10 +87,26 @@
 
             <div class="section-band section-band--viewport">▸ Field Documentation</div>
 
-            <!-- Full-width neural network visualization -->
+            <!-- Full-width neural network / MotionTrack showcase -->
             <div class="proj-gallery proj-gallery--network">
-                <div class="proj-gallery__item">
-                    <img src="pictures/nn_visualization_placeholder.png" alt="Neural network architecture and training diagnostics visualization" />
+                <div class="proj-gallery__item proj-showcase" aria-label="Neural network and MotionTrack demo showcase">
+                    <button class="slide-arrow slide-arrow--prev proj-showcase__arrow proj-showcase__arrow--prev" type="button" aria-label="Previous field documentation image">&#8249;</button>
+                    <button class="slide-arrow slide-arrow--next proj-showcase__arrow proj-showcase__arrow--next" type="button" aria-label="Next field documentation image">&#8250;</button>
+
+                    <figure class="proj-showcase__slide is-active">
+                        <img src="pictures/nn_visualization_placeholder.png" alt="Neural network architecture and training diagnostics visualization" />
+                        <figcaption>FIG. 02 // Neural Network</figcaption>
+                    </figure>
+                    <figure class="proj-showcase__slide">
+                        <img src="pictures/MotionTrack_Demo.png" alt="MotionTrack live behavioral analysis demo interface" />
+                        <figcaption>FIG. 03 // MotionTrack Demo</figcaption>
+                        <span class="proj-showcase__note">//Background and Figure removed for figure demonstration</span>
+                    </figure>
+
+                    <div class="proj-showcase__progress" aria-hidden="true">
+                        <span class="is-active"></span><span></span>
+                        <b>01/02</b>
+                    </div>
                 </div>
             </div>
             <p class="proj-gallery__caption">PyTorch risk-assessment network architecture with training diagnostics, calibration results, and per-class error analysis.</p>
@@ -188,5 +204,6 @@
 
         <script src="breadcrumb.js"></script>
         <script src="darkMode.js"></script>
+        <script src="droneShowcase.js"></script>
     </body>
 </html>
