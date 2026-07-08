@@ -74,35 +74,42 @@
                     <span class="proj-process__number">1</span>
                     <div>
                         <p class="proj-stat__label">Define the Market Scope</p>
-                        <p class="proj-stat__value">Establish the contract categories, time horizons, liquidity requirements, and risk constraints the model will support.</p>
+                        <p class="proj-stat__value">Defined a narrow pre-match scope: 90-minute match predictions for 1X2, totals at 1.5/2.5/3.5/4.5, exact scorelines, and margins derived from a full scoreline matrix. Value signals are only surfaced when model edge is at least 3%, while live prediction, shootouts, and tournament-advancement markets are deferred.</p>
                     </div>
                 </div>
                 <div class="proj-stat proj-process__step">
                     <span class="proj-process__number">2</span>
                     <div>
                         <p class="proj-stat__label">Build the Data Pipeline</p>
-                        <p class="proj-stat__value">Collect contract prices, order-book information, volume, expiration dates, and resolved outcomes in a consistent format.</p>
+                        <p class="proj-stat__value">Built a cached sports-data pipeline for fixtures, form, H2H, player ratings, xG sources, Elo, live tournament xG, and resolved match outcomes. Market prices currently enter as manually supplied decimal odds, so this is an event/outcome pipeline with market comparison rather than a live order-book feed.</p>
                     </div>
                 </div>
                 <div class="proj-stat proj-process__step">
                     <span class="proj-process__number">3</span>
                     <div>
                         <p class="proj-stat__label">Engineer Predictive Features</p>
-                        <p class="proj-stat__value">Transform market behavior and event context into measurable signals while preventing future information from leaking into training data.</p>
+                        <p class="proj-stat__value">Engineered football-context features including opponent-adjusted xG rates, Elo, blended player attack ratings, recent form, live in-tournament xG, rest fatigue, altitude, H2H history, and knockout conservatism. Odds are used to measure edge, not as model features, and target-exclusion checks help prevent future data leakage.</p>
                     </div>
                 </div>
                 <div class="proj-stat proj-process__step">
                     <span class="proj-process__number">4</span>
                     <div>
                         <p class="proj-stat__label">Train and Calibrate</p>
-                        <p class="proj-stat__value">Train probability models, compare candidate approaches, and calibrate outputs so predicted confidence aligns with observed outcomes.</p>
+                        <p class="proj-stat__value">The core model is a Dixon-Coles-corrected Poisson simulation, not a trained classifier, with calibration handled through a global scoring scalar and low-score correction. Candidate variants are compared through diagnostics and a defined promotion ladder, while recalibration is currently a manual post-matchday step.</p>
                     </div>
                 </div>
                 <div class="proj-stat proj-process__step">
                     <span class="proj-process__number">5</span>
                     <div>
                         <p class="proj-stat__label">Backtest and Validate</p>
-                        <p class="proj-stat__value">Evaluate the system with time-aware testing, simulated execution costs, position limits, and contract-level performance review.</p>
+                        <p class="proj-stat__value">Built interim chronological walk-forward validation so parameters are fit only on earlier completed games and evaluated on later ones. Contract-level review reports proper scoring rules for 1X2 and totals, while execution costs, exposure limits, and formal promotion gates remain planned validation controls.</p>
+                    </div>
+                </div>
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">6</span>
+                    <div>
+                        <p class="proj-stat__label">Recalibrate and Roll Out</p>
+                        <p class="proj-stat__value">The operating loop is designed around sealing predictions, logging results, rescoring completed matches, advancing the data epoch, and recalibrating before the next slate. New model candidates can run in shadow mode and only move toward user-facing output after passing predefined checks.</p>
                     </div>
                 </div>
             </div>
@@ -112,22 +119,22 @@
                 <div class="proj-stat">
                     <p class="proj-stat__label">Probability Calibration</p>
                     <strong class="prediction-result__metric">Brier</strong>
-                    <p class="proj-stat__value">Track probability accuracy and calibration rather than relying only on correct directional calls.</p>
+                    <p class="proj-stat__value">Built scoring evaluates completed snapshots with 3-way Brier score, log-loss, and raw hit rate, judging probability quality instead of only whether the favorite won. Totals evaluation also tracks goal-distribution metrics, with under-dispersion in high-scoring games identified as an active workstream.</p>
                 </div>
                 <div class="proj-stat">
                     <p class="proj-stat__label">Market Edge</p>
                     <strong class="prediction-result__metric">ΔP</strong>
-                    <p class="proj-stat__value">Measure the gap between model probability and market-implied probability after applying confidence thresholds.</p>
+                    <p class="proj-stat__value">Given decimal odds, the model removes bookmaker overround and computes edge as model probability minus fair implied probability, flagging outcomes at or above a 3% value threshold. Realized edge tracking is built, but proof of market edge is still a hypothesis until more odds-backed games are scored.</p>
                 </div>
                 <div class="proj-stat">
                     <p class="proj-stat__label">Backtesting</p>
                     <strong class="prediction-result__metric">Walk-Forward</strong>
-                    <p class="proj-stat__value">Preserve chronological order and evaluate on unseen contracts to reduce optimistic historical results.</p>
+                    <p class="proj-stat__value">The interim walk-forward evaluator sorts completed snapshots chronologically, fits calibration only on earlier games, and scores later games to avoid lookahead leakage. Provenance checks mark predictions as forward verified only when the target fixture is excluded from the consumed input data.</p>
                 </div>
                 <div class="proj-stat">
                     <p class="proj-stat__label">Risk Controls</p>
                     <strong class="prediction-result__metric">Limits</strong>
-                    <p class="proj-stat__value">Model transaction costs, cap contract exposure, and log every simulated recommendation for review.</p>
+                    <p class="proj-stat__value">Built controls include immutable prediction snapshots, input provenance, confidence-threshold gating, and a scalar cap that limits overcorrection on thin samples. Transaction-cost modeling, exposure caps, and staking recommendations are planned but intentionally held back until calibration is stronger.</p>
                 </div>
             </div>
 
@@ -169,7 +176,7 @@
                             </span>
                             <small class="prediction-profit__seed-label">Initial Deposit</small>
                         </span>
-                        <strong class="prediction-profit__value" data-start="0" data-seed="25" data-target="360">$0</strong>
+                        <strong class="prediction-profit__value" data-start="0" data-seed="25" data-target="1246">$0</strong>
                         <span class="prediction-profit__status">Net Profit</span>
                         <span class="prediction-profit__multiplier" aria-live="polite"></span>
                     </section>

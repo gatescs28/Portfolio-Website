@@ -29,11 +29,12 @@
                 <span class="proj-hero__numeral" aria-hidden="true">05</span>
                 <div class="proj-hero__meta">
                     <span>Project // 005</span>
-                    <span><i class="status-dot status-dot--blue"></i>Status: Draft</span>
+                    <span><i class="status-dot status-dot--green"></i>Status: Finished</span>
                 </div>
                 <h1 class="proj-title">Trash Panda PKM</h1>
-                <p class="proj-subtitle">Project page reserved for a personal knowledge-management system. Full write-up and documentation coming soon.</p>
-                <div class="telemetry-divider"><i></i><span>◂◂ File Shell Initialized ▸▸</span><i></i></div>
+                <p class="proj-project-subtitle">Local-First Personal Knowledge Management Desktop App</p>
+                <p class="proj-subtitle">A finished personal-use desktop app for calm, private organization. Trash Panda PKM keeps notes, goals, plans, learning material, wishlist items, catalogue entries, tasks, and personal records local-first without cloud accounts, collaboration overhead, or unnecessary product bloat.</p>
+                <div class="telemetry-divider"><i></i><span>◂◂ Local Workspace Ready ▸▸</span><i></i></div>
             </div>
 
             <!-- Cover image -->
@@ -41,36 +42,101 @@
                 <img src="pictures/Trash_Panda.jpg" alt="Trash Panda PKM project cover" />
             </div>
 
-            <!-- Empty project shell -->
+            <!-- Project summary -->
             <div class="proj-stats">
                 <div class="proj-stat">
                     <p class="proj-stat__label">Overview</p>
-                    <p class="proj-stat__value">Content pending.</p>
+                    <p class="proj-stat__value">Trash Panda PKM is a minimal Notion/Obsidian-style organization app built for one user. It prioritizes fast navigation, private local storage, and a focused interface over cloud sync, collaboration, or speculative features.</p>
                 </div>
                 <div class="proj-stat">
                     <p class="proj-stat__label">Technologies</p>
-                    <p class="proj-stat__value">Content pending.</p>
+                    <p class="proj-stat__value tech-stack">
+                        <span>Svelte 4</span>
+                        <span>TypeScript</span>
+                        <span>Vite</span>
+                        <span>Tauri 2</span>
+                        <span>Rust</span>
+                        <span>SQLite</span>
+                        <span>Plain CSS</span>
+                        <span>CSS variables</span>
+                    </p>
                 </div>
                 <div class="proj-stat">
                     <p class="proj-stat__label">Outcome</p>
-                    <p class="proj-stat__value">Content pending.</p>
+                    <p class="proj-stat__value">Built a real desktop product with a maintainable architecture, local persistence, polished section navigation, editable notes, and a product scope that stays intentionally simple so the app can grow feature by feature.</p>
                 </div>
             </div>
 
-            <div class="section-band">▸ Project Documentation Pending</div>
+            <div class="section-band">▸ Product Highlights</div>
 
             <div class="proj-stats">
                 <div class="proj-stat">
-                    <p class="proj-stat__label">Build Notes</p>
-                    <p class="proj-stat__value">Reserved for architecture, workflow, and feature details.</p>
+                    <p class="proj-stat__label">Local-First Workspace</p>
+                    <p class="proj-stat__value">Designed for private personal knowledge management with local persistence and no dependency on cloud accounts, collaboration systems, or remote sync.</p>
                 </div>
                 <div class="proj-stat">
-                    <p class="proj-stat__label">Media</p>
-                    <p class="proj-stat__value">Reserved for screenshots, diagrams, and interface previews.</p>
+                    <p class="proj-stat__label">Dashboard and Sections</p>
+                    <p class="proj-stat__value">Includes sidebar navigation for Home, Notes, Goals, Wishlist, Catalogue, Plans, Learning, To do, and Personal, plus a Home dashboard with a time-based greeting and section cards.</p>
                 </div>
                 <div class="proj-stat">
-                    <p class="proj-stat__label">Next Update</p>
-                    <p class="proj-stat__value">Reserved for final project summary and results.</p>
+                    <p class="proj-stat__label">Focused Writing Flow</p>
+                    <p class="proj-stat__value">The Notes section uses editable note cards and a focused editor experience, keeping the interface direct and useful instead of turning into an overloaded productivity suite.</p>
+                </div>
+            </div>
+
+            <h2 class="proj-heading proj-heading--process"><span>Engineering Highlights</span><small>Build Decisions</small></h2>
+            <div class="proj-process">
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">1</span>
+                    <div>
+                        <p class="proj-stat__label">Desktop App Foundation</p>
+                        <p class="proj-stat__value">Built the app with Tauri and Rust, pairing a lightweight desktop shell with a responsive Svelte and TypeScript frontend.</p>
+                    </div>
+                </div>
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">2</span>
+                    <div>
+                        <p class="proj-stat__label">Local Data Layer</p>
+                        <p class="proj-stat__value">Designed a local-first persistence layer with SQLite so personal data stays on the device and the app remains useful without online services.</p>
+                    </div>
+                </div>
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">3</span>
+                    <div>
+                        <p class="proj-stat__label">Simple State and Navigation</p>
+                        <p class="proj-stat__value">Managed navigation and interface state with Svelte’s built-in reactivity instead of adding routing or state-management libraries before they were needed.</p>
+                    </div>
+                </div>
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">4</span>
+                    <div>
+                        <p class="proj-stat__label">Custom Interaction Polish</p>
+                        <p class="proj-stat__value">Created a custom Home-to-section expand animation and small UI interactions with CSS and Svelte to make the app feel polished while staying lightweight.</p>
+                    </div>
+                </div>
+                <div class="proj-stat proj-process__step">
+                    <span class="proj-process__number">5</span>
+                    <div>
+                        <p class="proj-stat__label">Maintainable Visual System</p>
+                        <p class="proj-stat__value">Built the interface with plain CSS and custom design variables, avoiding Tailwind, Bootstrap, and UI frameworks while keeping the style coherent.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-band">▸ Product Judgment</div>
+
+            <div class="proj-stats">
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Restraint as a Feature</p>
+                    <p class="proj-stat__value">The project intentionally avoids cloud sync, collaboration, and broad feature bloat. That restraint keeps the app faster to understand, easier to maintain, and better aligned with its single-user purpose.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Built to Grow Slowly</p>
+                    <p class="proj-stat__value">The architecture is structured so new sections and behaviors can be added one feature at a time without forcing a larger rewrite or unnecessary abstraction layer.</p>
+                </div>
+                <div class="proj-stat">
+                    <p class="proj-stat__label">Portfolio Takeaway</p>
+                    <p class="proj-stat__value">Trash Panda PKM demonstrates desktop product development, practical architecture choices, local data handling, and polished user experience without overengineering the solution.</p>
                 </div>
             </div>
 

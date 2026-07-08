@@ -4514,6 +4514,10 @@ select {
     content: 'TEST';
 }
 
+.prediction-page .prediction-process .proj-process__step:nth-child(6) .proj-process__number::after {
+    content: 'ROLL';
+}
+
 .prediction-results {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
