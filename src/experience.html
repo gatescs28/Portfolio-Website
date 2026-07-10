@@ -21,7 +21,7 @@
         </header>
         <div class="breadcrumb-bar"></div>
         <div class="experience-hero">
-            <img src="pictures/experience-hero-office.jpeg" alt="" />
+            <img src="pictures/Expirience_Header.png" alt="" />
             <h1 class="experience-hero-title">Experience</h1>
         </div>
         <main class="experience-content">
@@ -30,16 +30,51 @@
                     <h2 class="exp-heading">Where I've Been</h2>
                     <p class="exp-body">My experience has put me in a mix of professional environments, from office-based internship work to collaborative technical settings on campus. Through my internships, I gained experience working inside structured teams, communicating clearly, adapting to existing workflows, and contributing to projects where reliability and organization mattered.</p>
                     <p class="exp-body">Outside the office, my time in the Computer Science Club has strengthened the way I work with other people on technical ideas. I have learned how to contribute in group discussions, build alongside peers, and stay productive whether I am solving a problem independently or helping move a team project forward.</p>
-                    <img class="exp-inline-img" src="pictures/external-code-workspace.jpeg" alt="" />
+                    <div class="exp-inline-img exp-showcase" aria-label="Computer Science Club game showcase">
+                        <button class="slide-arrow slide-arrow--prev exp-showcase__arrow exp-showcase__arrow--prev" type="button" aria-label="Previous Computer Science Club image">&#8249;</button>
+                        <button class="slide-arrow slide-arrow--next exp-showcase__arrow exp-showcase__arrow--next" type="button" aria-label="Next Computer Science Club image">&#8250;</button>
+
+                        <figure class="exp-showcase__slide is-active">
+                            <img src="pictures/CS_Club_Game.png" alt="Computer Science Club game project screenshot" />
+                            <figcaption>CS Club // Game Build</figcaption>
+                        </figure>
+                        <figure class="exp-showcase__slide exp-showcase__slide--full-view">
+                            <img src="pictures/CS_Club_pic2.png" alt="Computer Science Club game development screenshot" />
+                            <figcaption>CS Club // Map Development</figcaption>
+                        </figure>
+
+                        <div class="exp-showcase__progress" aria-hidden="true">
+                            <span class="is-active"></span><span></span>
+                            <b>01/02</b>
+                        </div>
+                    </div>
                     <p class="exp-body">In the Computer Science Club, I worked with a team of student developers to build a game, contributing code while coordinating with others on design choices, task division, and implementation details. That project gave me practical experience building alongside a team and adapting my work to fit a shared technical vision.</p>
                 </div>
                 <div class="exp-col">
-                    <img class="exp-side-img" src="pictures/external-developer-screen.jpeg" alt="" />
+                    <div class="exp-side-img exp-showcase" aria-label="Sales Insights internship visual showcase">
+                        <button class="slide-arrow slide-arrow--prev exp-showcase__arrow exp-showcase__arrow--prev" type="button" aria-label="Previous Sales Insights image">&#8249;</button>
+                        <button class="slide-arrow slide-arrow--next exp-showcase__arrow exp-showcase__arrow--next" type="button" aria-label="Next Sales Insights image">&#8250;</button>
+
+                        <figure class="exp-showcase__slide is-active">
+                            <img src="pictures/Sales_Insights_Pic.png" alt="Sales Insights internship project visual" />
+                            <figcaption>Sales Insights // Workspace</figcaption>
+                        </figure>
+                        <figure class="exp-showcase__slide">
+                            <img src="pictures/Sales_Insights_Visual.png" alt="Sales Insights visual dashboard" />
+                            <figcaption>Sales Insights // Output Visual</figcaption>
+                        </figure>
+
+                        <div class="exp-showcase__progress" aria-hidden="true">
+                            <span class="is-active"></span><span></span>
+                            <b>01/02</b>
+                        </div>
+                    </div>
                     <p class="exp-body exp-body--right">At Sales Insights, I worked in a more independent internship environment where I was trusted to manage my own progress, stay organized, and solve problems without relying on a built-in team structure. That experience helped me build confidence in self-directed work, showing that I can take ownership of tasks, communicate when needed, and keep moving even when the next step is not handed to me.</p>
                 </div>
             </div>
         </main>
         <script src="breadcrumb.js"></script>
         <script src="darkMode.js"></script>
+        <script src="experienceShowcase.js"></script>
     </body>
 </html>

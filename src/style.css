@@ -1064,21 +1064,139 @@
     }
 
     .exp-side-img {
+        position: relative;
+        overflow: hidden;
         width: 100%;
         aspect-ratio: 4 / 3;
-        object-fit: cover;
         border-radius: 18px;
         box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.7),
                     4px 4px 12px rgba(0, 0, 0, 0.18);
     }
 
+    img.exp-side-img {
+        object-fit: cover;
+    }
+
+    .exp-showcase {
+        background: #17191c;
+        cursor: pointer;
+    }
+
+    .exp-showcase__slide {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        margin: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 650ms cubic-bezier(.2,.8,.2,1);
+    }
+
+    .exp-showcase__slide.is-active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .exp-showcase__slide img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .exp-showcase__slide--full-view::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url("pictures/CS_Club_pic2.png");
+        background-position: center;
+        background-size: cover;
+        filter: blur(14px) brightness(.72) saturate(1.1);
+        transform: scale(1.08);
+    }
+
+    .exp-showcase__slide--full-view img {
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        object-fit: contain;
+        filter: drop-shadow(0 10px 22px rgba(0,0,0,.38));
+    }
+
+    .exp-showcase__slide figcaption {
+        position: absolute;
+        z-index: 4;
+        bottom: 14px;
+        left: 14px;
+        padding: 5px 12px;
+        border-radius: 999px;
+        background: rgba(23,25,28,.88);
+        color: var(--blue);
+        font: 9.5px 'IBM Plex Mono', monospace;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        pointer-events: none;
+    }
+
+    .exp-showcase__arrow {
+        z-index: 6;
+    }
+
+    .exp-showcase__arrow--prev {
+        left: 14px;
+    }
+
+    .exp-showcase__arrow--next {
+        right: 14px;
+    }
+
+    .exp-showcase__progress {
+        position: absolute;
+        z-index: 6;
+        right: 14px;
+        bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 7px 10px;
+        border-radius: 999px;
+        background: rgba(23,25,28,.84);
+        color: var(--paper);
+        font: 10px 'IBM Plex Mono', monospace;
+        letter-spacing: 1px;
+    }
+
+    .exp-showcase__progress span {
+        width: 18px;
+        height: 4px;
+        border-radius: 999px;
+        background: rgba(239,240,236,.28);
+    }
+
+    .exp-showcase__progress span.is-active {
+        background: var(--blue);
+    }
+
+    .exp-showcase__progress b {
+        margin-left: 4px;
+        color: var(--blue);
+        font-weight: 600;
+    }
+
     .exp-inline-img {
+        position: relative;
+        overflow: hidden;
         width: 100%;
         aspect-ratio: 16 / 9;
-        object-fit: cover;
         border-radius: 18px;
         box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.7),
                     4px 4px 12px rgba(0, 0, 0, 0.18);
+    }
+
+    img.exp-inline-img {
+        object-fit: cover;
     }
 
     /* ─────────────────────────────────────────────────────────
