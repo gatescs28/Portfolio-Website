@@ -918,6 +918,14 @@
         display: block;
     }
 
+    .projects-grid .project-card[href="project1.html"] .project-card__img,
+    .projects-grid .project-card[href="project1.html"] .project-card__video {
+        right: auto;
+        left: -42px;
+        width: calc(100% + 42px);
+        object-position: 25% center;
+    }
+
     .project-card__video {
         opacity: 0;
         transition: opacity 380ms cubic-bezier(0.16, 1, 0.3, 1);

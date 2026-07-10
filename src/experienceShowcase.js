@@ -2,19 +2,20 @@
     const showcases = Array.from(document.querySelectorAll('.exp-showcase'));
     if (!showcases.length) return;
 
-    showcases.forEach((showcase) => {
+    const ROTATION_DELAY = 4200;
+    let intervalId = null;
+
+    const controllers = showcases.map((showcase) => {
         const slides = Array.from(showcase.querySelectorAll('.exp-showcase__slide'));
         const pips = Array.from(showcase.querySelectorAll('.exp-showcase__progress span'));
         const counter = showcase.querySelector('.exp-showcase__progress b');
         const prev = showcase.querySelector('.exp-showcase__arrow--prev');
         const next = showcase.querySelector('.exp-showcase__arrow--next');
-
-        if (slides.length < 2) return;
-
         let current = 0;
-        let intervalId = null;
 
         function update(index) {
+            if (slides.length < 2) return;
+
             slides[current].classList.remove('is-active');
             current = (index + slides.length) % slides.length;
             slides[current].classList.add('is-active');
@@ -28,40 +29,55 @@
             }
         }
 
-        function start() {
-            window.clearInterval(intervalId);
-            intervalId = window.setInterval(() => update(current + 1), 4200);
+        function advance(amount) {
+            update(current + amount);
         }
 
-        function stop() {
-            window.clearInterval(intervalId);
-        }
+        return { showcase, slides, prev, next, advance };
+    }).filter((controller) => controller.slides.length > 1);
+
+    if (!controllers.length) return;
+
+    function stopAll() {
+        window.clearInterval(intervalId);
+    }
+
+    function startAll() {
+        stopAll();
+        intervalId = window.setInterval(() => {
+            controllers.forEach((controller) => controller.advance(1));
+        }, ROTATION_DELAY);
+    }
+
+    function resetSharedTimer() {
+        startAll();
+    }
+
+    controllers.forEach((controller) => {
+        const { showcase, prev, next, advance } = controller;
 
         prev?.addEventListener('click', () => {
-            stop();
-            update(current - 1);
-            start();
+            advance(-1);
+            resetSharedTimer();
         });
 
         next?.addEventListener('click', () => {
-            stop();
-            update(current + 1);
-            start();
+            advance(1);
+            resetSharedTimer();
         });
 
         showcase.addEventListener('click', (event) => {
             if (event.target.closest('.exp-showcase__arrow')) return;
 
-            stop();
-            update(current + 1);
-            start();
+            advance(1);
+            resetSharedTimer();
         });
 
-        showcase.addEventListener('mouseenter', stop);
-        showcase.addEventListener('mouseleave', start);
-        showcase.addEventListener('focusin', stop);
-        showcase.addEventListener('focusout', start);
-
-        start();
+        showcase.addEventListener('mouseenter', stopAll);
+        showcase.addEventListener('mouseleave', startAll);
+        showcase.addEventListener('focusin', stopAll);
+        showcase.addEventListener('focusout', startAll);
     });
+
+    startAll();
 })();
